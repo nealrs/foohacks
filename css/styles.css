@@ -187,6 +187,11 @@ MAIN CONTENT
   margin-right:.25em;
 }
 
+/*.stripe:nth-of-type(even) {
+    background-color: #DDDDDD; !important;
+    padding
+}*/
+
 /* ---------------------
 MOBILE
 --------------------- */

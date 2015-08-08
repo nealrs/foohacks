@@ -284,7 +284,7 @@
       var outputElement = document.getElementById('output');
       navigator.serviceWorker.register('sw2.js', { scope: './' })
         .then(function(r) {
-          console.log('registered service worker');
+          console.log('registered service worker!!');
         })
         .catch(function(whut) {
           console.error('uh oh... ');
@@ -293,6 +293,7 @@
 
       window.addEventListener('beforeinstallprompt', function(e) {
         outputElement.textContent = 'beforeinstallprompt Event fired';
+        console.log('beforeinstallprompt Event fired');
       });
     });
 

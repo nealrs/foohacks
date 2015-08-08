@@ -129,6 +129,12 @@ a.logo {
   border-bottom: none;
 }
 
+a.headshot {
+  border-bottom: none;
+}
+img.headshot {
+  border-bottom:none;
+}
 
 /* ---------------------
 BUTTON

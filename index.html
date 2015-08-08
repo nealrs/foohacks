@@ -239,9 +239,6 @@
           </div>
         </div>
 
-
-
-
         <!-- footer-->
         <hr>
         <p><a href="https://devpost.com" title="learn more about Devpost" class="logo"><img src="img/devpost-logo.svg" alt="Devpost" width="150px"></a> The home for hackers</p>
@@ -267,22 +264,10 @@
   <script src='//cdn.goroost.com/roostjs/sg7ar3h4idoy7lsdz48wzq63qeqwmtya' async></script>
   <!--<script src='js/vendor/customroost.js' async></script>-->
 
-  <!-- Cache Polyfill-->
-  <!--<script src="js/vendor/serviceworker-cache-polyfill.js"></script>-->
   <script>
-    /*if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('https://nealrs.github.io/foohacks/js/vendor/sw.js').then(function(registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ',    registration.scope);
-      }).catch(function(err) {
-        // registration failed :(
-        console.log('ServiceWorker registration failed: ', err);
-      });
-    }*/
-
     window.addEventListener('load', function() {
       var outputElement = document.getElementById('output');
-      navigator.serviceWorker.register('sw2.js', { scope: './' })
+      navigator.serviceWorker.register('sw.js', { scope: './' })
         .then(function(r) {
           console.log('registered service worker!!');
         })
@@ -312,7 +297,7 @@
         },
         close: function(e, ui) {},
         closed: function(e, ui) {}
-});
+      });
     });
   </script>
 

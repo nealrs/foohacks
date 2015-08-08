@@ -54,8 +54,6 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <script src='//cdn.goroost.com/roostjs/sg7ar3h4idoy7lsdz48wzq63qeqwmtya' async></script>
-
 </head>
 
 <body>
@@ -265,7 +263,23 @@
   <script src="js/bellows/plugin.min.js"></script>
   <script src="js/bellows/bellows.min.js"></script>
 
+  <!-- Roost-->
+  <script src='//cdn.goroost.com/roostjs/sg7ar3h4idoy7lsdz48wzq63qeqwmtya' async></script>
+
+  <!-- Cache Polyfill-->
+  <script src="js/vendor/serviceworker-cache-polyfill.js"></script>
   <script>
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('js/sw.js').then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ',    registration.scope);
+      }).catch(function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    }
+
     $(function() {
       // start foundation
       $(document).foundation();

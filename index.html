@@ -270,8 +270,7 @@
   <!-- Cache Polyfill-->
   <script src="js/vendor/serviceworker-cache-polyfill.js"></script>
   <script>
-
-    if ('serviceWorker' in navigator) {
+    /*if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('https://nealrs.github.io/foohacks/js/vendor/sw.js').then(function(registration) {
         // Registration was successful
         console.log('ServiceWorker registration successful with scope: ',    registration.scope);
@@ -279,7 +278,23 @@
         // registration failed :(
         console.log('ServiceWorker registration failed: ', err);
       });
-    }
+    }*/
+
+    window.addEventListener('load', function() {
+      var outputElement = document.getElementById('output');
+      navigator.serviceWorker.register('sw2.js', { scope: './' })
+        .then(function(r) {
+          console.log('registered service worker');
+        })
+        .catch(function(whut) {
+          console.error('uh oh... ');
+          console.error(whut);
+        });
+
+      window.addEventListener('beforeinstallprompt', function(e) {
+        outputElement.textContent = 'beforeinstallprompt Event fired';
+      });
+    });
 
     $(function() {
       // start foundation

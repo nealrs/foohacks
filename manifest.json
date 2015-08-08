@@ -35,5 +35,5 @@
    "short_name": "FooHacks",
    "start_url": "/index.html",
    "display": "standalone",
-   "orientation": "portrait",
+   "orientation": "portrait"
 }

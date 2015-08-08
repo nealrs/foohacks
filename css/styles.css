@@ -218,4 +218,8 @@ MOBILE
     padding: 0.2em 0;
   }
 
+  .content{
+    padding-top:0.9375rem;
+  }
+
 }

@@ -1,0 +1,215 @@
+@font-face {
+  font-family: 'ClearSans-Bold';
+  src: url('../fonts/ClearSans-Bold.eot');
+  src: url('../fonts/ClearSans-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/ClearSans-Bold.woff') format('woff'),
+       url('../fonts/ClearSans-Bold.ttf') format('truetype'),
+       url('../fonts/ClearSans-Bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* ---------------------
+TYPOGRAPHY
+--------------------- */
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #575553;
+  line-height: 1.5625;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'ClearSans-Bold', ’HelveticaNeue-Bold’, 'Helvetica Neue Bold', sans-serif;
+  font-weight: normal;
+  color: #003e54;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.375em; /*38px*/
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.875em; /*30px*/
+  padding: 1em 0 0.5em 0;
+}
+
+h2:first-of-type {
+  padding-top: 0;
+}
+
+h3 {
+  font-size: 1.15em; /*22px*/
+  /*margin-bottom: 0.3em;
+  margin-top: 2em;*/
+  padding: 0em 0 0.5em 0;
+}
+
+h3.border {
+  padding-bottom: 0.4em;
+  border-bottom: 3px solid #e6e6e6;
+}
+
+h4 {
+  font-size: 1.125em; /*18px*/
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+}
+
+h5 {
+  font-size: 1.125em; /*18px*/
+}
+
+p, ol, ul {
+  font-size: 1em; /*16px*/
+  margin: 0 0 1em 0;
+}
+
+p.large {
+  font-size: 1.375em;
+  color: #FFF;
+}
+
+p.small {
+  font-size: 1em;
+  color: #FFF;
+}
+
+a {
+  color: #2d9eb2;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: 0.3s ease;
+          transition: 0.3s ease;
+}
+
+a:active, a:hover {
+  color: #207180;
+  border-bottom: 1px solid #207180;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+/* ---------------------
+HEADER
+--------------------- */
+
+.header {
+  background: #003e54 url('../img/hacker-report-header.jpg') no-repeat center top;
+  background-size: cover;
+  text-align: center;
+  padding: 3em 0;
+}
+
+.header h1,
+.header h2,
+.header h3 {
+  color: white;
+}
+
+.header h2 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.header img {
+  height: 42px;
+  margin-bottom: 0.8em;
+}
+
+a.logo {
+  border-bottom: none;
+}
+
+
+/* ---------------------
+BUTTON
+--------------------- */
+
+
+a.button {
+  font-family: 'ClearSans-Bold', ’HelveticaNeue-Bold’, 'Helvetica Neue Bold', sans-serif;
+  color: white;
+  background: #2d9eb2;
+  border-color: #237a89;
+  border-style: solid;
+  border-width: 0 0 2px;
+  font-size: 14px;
+  padding: 0.5em 1em;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  display: inline-block;
+  text-align: center;
+}
+
+a.button:focus,
+a.button:hover {
+  background: #268899;
+  border-color: #1a5b66;
+}
+
+a.button:active {
+  border-width: 2px 0 0;
+}
+
+.contact {
+  margin: 2em 0;
+  background: #f0f0f0;
+  padding: 1.3em;
+  font-size: 14px;
+}
+
+.contact p {
+  margin-bottom: 0;
+}
+
+
+
+/* ---------------------
+MAIN CONTENT
+--------------------- */
+
+.content {
+  padding: 3em 0;
+}
+
+.headshot{
+  width:60px;
+  border-radius: 4px;
+}
+
+/* ---------------------
+MOBILE
+--------------------- */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 1.875em; /*30px*/
+  }
+
+  .header h2 {
+    font-size: 20px;
+  }
+
+  p.large {
+    font-size: 1em;
+  }
+
+  .header,
+  .content {
+    padding: .5em 0;
+  }
+
+  td, th {
+    padding: 0.2em 0;
+  }
+
+}

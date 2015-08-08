@@ -19,15 +19,21 @@
       "density": "2.0"
     },
     {
-      "src": "img/icon-3x.png",
+      "src": "/img/icon-3x.png",
       "sizes": "144x144",
       "type": "image/png",
       "density": "3.0"
+    },
+    {
+      "src": "/img/icon-4x.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "density": "4.0"
     }
   ],
    "name": "FooHacks 2015",
    "short_name": "FooHacks",
-   "start_url": "index.html",
+   "start_url": "/index.html",
    "display": "standalone",
-   "orientation": "landscape",
+   "orientation": "portrait",
 }

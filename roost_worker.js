@@ -35,7 +35,7 @@ self.addEventListener('push', function(evt) {
                 for (var i = 0; i < json.notifications.length; i++) {
                     var note = json.notifications[i];
                     if (_roostSW.logging) console.log("Showing notification: " + note.body);
-                    var url = "/roost.html?noteID=" + note.roost_note_id + "&sendID=" + note.roost_send_id + "&body=" + encodeURIComponent(note.body);
+                    var url = "/foohacks/roost.html?noteID=" + note.roost_note_id + "&sendID=" + note.roost_send_id + "&body=" + encodeURIComponent(note.body);
                     promises.push(showNotification(note.roost_note_id, note.title, note.body, url, _roostSW.appKey));
                 }
                 return Promise.all(promises);

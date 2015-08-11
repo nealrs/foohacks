@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link rel="manifest" href="/roost_manifest.json">
+    <link rel="manifest" href="/foohacks/roost_manifest.json">
     <script>
         //To customize filename, change the above and below.
         var swFilename = "roost_worker.js";
@@ -67,8 +67,8 @@
                 Notification.requestPermission(function (permission) {
                     if (logging) console.log('Notification.requestPermission result.', permission);
                     if (permission === "granted") {
-                        var serviceworkerURL = "/" + swFilename;
-                        var scope = "/";
+                        var serviceworkerURL = "/foohacks/" + swFilename;
+                        var scope = "/foohacks/";
 
                         navigator.serviceWorker.register(serviceworkerURL, {scope: scope}).then(function (swr) {
                             if (logging) console.log("SW ready", swr);

@@ -105,7 +105,7 @@ HEADER
   background: #003e54 url('../img/hacker-report-header.jpg') no-repeat center top;
   background-size: cover;
   text-align: center;
-  padding: 3em 0;
+  padding: 1.5em 0;
 }
 
 .header h1,
@@ -177,7 +177,31 @@ a.button:active {
   margin-bottom: 0;
 }
 
-
+.chatToggle{
+  background-color:#2d9eb2;
+  border-color:#237a89;
+  color:white;
+  box-shadow:none;
+  border-radius:2px;
+  transition:all 200ms ease-out;
+  display:inline-block;
+  border-style:solid;
+  border-width:0 0 3px;
+  cursor:pointer;
+  font-family:'ClearSans', 'HelveticaNeue-Bold', 'Helvetica Neue Bold', sans-serif;
+  font-weight:bold;
+  line-height:normal;
+  margin:0 0 1.25em;
+  position:relative;
+  text-decoration:none;
+  text-align:center;
+  display:inline-block;
+  padding-top:0.5625em;
+  padding-right:1.125em;
+  padding-bottom:0.625em;
+  padding-left:1.125em;
+  font-size:1em;
+}
 
 /* ---------------------
 MAIN CONTENT
@@ -227,5 +251,8 @@ MOBILE
   .content{
     padding-top:0.9375rem;
   }
+
+  .footer{text-align:center;}
+  .hfh{display:none;}
 
 }

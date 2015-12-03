@@ -34,7 +34,7 @@
   <!-- foundation: loading e'erthang for now -->
   <link rel="stylesheet" href="css/styles.css">
   <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-  
+
   <!-- CSS for bellows-->
   <link rel="stylesheet" href="css/bellows.min.css">
   <link rel="stylesheet" href="css/bellows-theme.css">
@@ -66,16 +66,28 @@
       <div class="large-12 columns">
         <!--<img src="img/devpost-reversed-rgb.svg">-->
         <h1>FooHacks</h1>
-        <p class="small">September 14&ndash;16 2015 · NYC</p>
+        <p class="small">September 18&ndash;20 2015 · NYC</p>
         <!--<p class="small countdown" id="tzcd"></p>-->
+
+        <!-- Hackathon submission button-->
+        <div style="text-align:center;">
+          <a href target="_blank" class="button devpostButton" data-slug="artik" data-begin="2015-05-12 10:00 PDT" data-deadline="2015-11-30 17:00 PST" data-defcss="false" >Submit your hack on Devpost</a>
+        </div>
+
       </div>
     </div>
   </section>
 
-
   <section class="content">
     <div class="row">
       <div class="large-10 large-offset-1 columns">
+
+        <!-- Gitter / sidecar button-->
+        <div style="text-align:center;">
+          <a href class="button chatToggle">Join live chat</a>
+          <a href="http://nealrs.github.io/expo" class="button tableNumber">Go to the Expo</a>
+        </div>
+
 
         <!-- Bellows go here-->
         <div class="bellows">
@@ -148,10 +160,10 @@
 
           <div class="bellows__item">
             <div class="bellows__header">
-              Submit your hack
+              Submitting your hack
             </div>
             <div class="bellows__content">
-              <p>You <em>must</em> submit your hack on <a href="https://devpost.com">Devpost</a> before 10:30am EST on Sunday, September 16th. Here's how:</p>
+              <p>You <em>must</em> submit your hack on <a href="https://devpost.com">Devpost</a> before 10:30am ET on Sunday, September 20th. Here's how:</p>
               <p><strong>&rarr;</strong> <em>Everybody</em> on your team must register for the hackathon @ <a href="https://foohacks.devpost.com">foohacks.devpost.com</a>.</p>
               <p><strong>&rarr;</strong> <em>One</em> team member should <a href="https://contextio.devpost.com/submissions/new">enter a submission</a> before the deadline and tag the whole team in the team member section. (Use the email addresses that correspond to your Devpost accounts.)</p>
               <p><strong>&rarr;</strong> Start early!! You can always save a draft and revise it before the deadline.</p>
@@ -180,7 +192,7 @@
                     <td>
                       <h3><a href="http://twilio.com">Twilio</a></h3>
                       <p>
-                        <span class="label radius ">Prize</span> <a href="http://twilio.hiring.link"><span class="label info radius ">We're hiring!</span></a>
+                        <span class="label radius ">Prize</span> <span class="label info radius ">We're hiring!</span>
                       </p>
                     </td>
                     <td>
@@ -195,7 +207,7 @@
                     <td>
                       <h3><a href="http://sendgrid.com">Sendgrid</a></h3>
                       <p>
-                        <span class="label radius ">Prize</span> <a href="http://twilio.hiring.link">
+                        <span class="label radius ">Prize</span>
                       </p>
                     </td>
                     <td>
@@ -289,16 +301,25 @@
                   </td>
                 </tr>
               </table>
-
-
             </div>
           </div>
+
+          <!--<div class="bellows__item">
+            <div class="bellows__header chatToggle">
+              Chat
+            </div>
+            <div class="bellows__content">
+
+            </div>
+          </div>-->
+
         </div>
 
         <!-- footer-->
         <hr>
-        <p><a href="https://devpost.com" title="learn more about Devpost" class="logo"><img src="img/devpost-logo.svg" alt="Devpost" width="150px"></a> The home for hackers</p>
-
+        <div class="footer">
+          <p><a href="https://devpost.com" title="learn more about Devpost" class="logo"><img src="img/devpost-logo.svg" alt="Devpost" width="150px"></a><span class="hfh"> The home for hackers</span></p>
+        </div>
       </div> <!-- end right column (large-8) -->
     </div> <!-- end row -->
   </section>
@@ -316,10 +337,12 @@
   <script src="js/bellows/plugin.min.js"></script>
   <script src="js/bellows/bellows.min.js"></script>
 
+  <!-- Hackathon button -->
+  <script src="js/devpostButton.js"></script>
+
   <!-- Roost-->
   <script src='//cdn.goroost.com/roostjs/sg7ar3h4idoy7lsdz48wzq63qeqwmtya' async></script>
   <!--<script src='js/vendor/customroost.js' async></script>-->
-
   <script>
     window.addEventListener('load', function() {
       var outputElement = document.getElementById('output');
@@ -356,6 +379,15 @@
       });
     });
   </script>
+
+  <!-- sidecar / gitter room -->
+  <script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'gitterHQ/sidecar-demo',
+    activationElement: '.chatToggle'
+  };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 </body>
 </html>
